@@ -1,5 +1,7 @@
 # Go SMB Sync Tool
 
+![SMBSync Application](https://github-production-user-asset-6210df.s3.amazonaws.com/55839877/490175366-e94a8a3a-63f7-49fa-ba24-89b74923f348.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250916%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250916T173818Z&X-Amz-Expires=300&X-Amz-Signature=04f0a6796421c11312571946a8f6e8447652910b3a24b788790a941af909b7e7&X-Amz-SignedHeaders=host)
+
 Esta es una herramienta de línea de comandos (CLI) para sincronizar archivos con recursos compartidos SMB. Su principal objetivo es copiar archivos de forma segura, verificar su integridad y, opcionalmente, comprimirlos y eliminarlos del origen.
 
 ## Características

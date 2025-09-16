@@ -43,3 +43,5 @@ files/
 
 .*/
 
+coverage.html
+copy_test.sh

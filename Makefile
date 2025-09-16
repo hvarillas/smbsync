@@ -1,4 +1,4 @@
-.PHONY: build build-windows build-linux test clean run
+.PHONY: build build-windows build-linux test test-verbose test-coverage test-race test-bench clean run
 
 build:
 	@echo "Building smbsync..."
@@ -17,10 +17,29 @@ build-windows-upx: build-windows
 	upx --best --lzma smbsync-windows-amd64.exe
 
 test:
+	@echo "Running unit tests..."
 	go test ./...
 
+test-verbose:
+	@echo "Running unit tests with verbose output..."
+	go test -v ./...
+
+test-coverage:
+	@echo "Running tests with coverage..."
+	go test -coverprofile=coverage.out ./...
+	go tool cover -html=coverage.out -o coverage.html
+	@echo "Coverage report generated: coverage.html"
+
+test-race:
+	@echo "Running tests with race detection..."
+	go test -race ./...
+
+test-bench:
+	@echo "Running benchmarks..."
+	go test -bench=. ./...
+
 clean:
-	rm -f smbsync smbsync-* *.exe *.log
+	rm -f smbsync smbsync-* *.exe *.log coverage.out coverage.html
 
 run:
 	@echo "Make sure to copy .env.example to .env and configure it first"

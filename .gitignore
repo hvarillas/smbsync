@@ -41,3 +41,5 @@ smbsync
 *.txt
 files/
 
+.*/
+

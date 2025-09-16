@@ -167,3 +167,7 @@ make fmt
 - Las notificaciones Telegram se envían solo para errores críticos.
 - La verificación de integridad es obligatoria para todos los archivos transferidos.
 - La funcionalidad de encriptación permite proteger cualquier string sensible, no solo contraseñas.
+
+## Licencia
+
+Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
